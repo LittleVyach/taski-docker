@@ -18,7 +18,6 @@ services:
       - static_volume:/backend_static
   frontend:
     image: snowcat1/taski_frontend  
-    restart: always
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
